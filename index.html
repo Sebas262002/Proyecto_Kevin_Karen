@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pandas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="img/argentina.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+      <h1><a href="#" class="fst-italic">Mapa turistico de Argentina</a></h1>
+      <h2>Argentina <span>El pulmon del Planeta </span>.</h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Inicio</a></li>
+          <li><a class="nav-link" href="#about">Historia</a></li>
+          <li><a class="nav-link" href="#resume">Cultura y Tradiciones</a></li>
+          <li><a class="nav-link" href="#services">Lugares Turisticos</a></li>
+          <li><a class="nav-link" href="#portfolio">Geografia y Biodiversidad</a></li>
+          <li><a class="nav-link" href="#contact">Divisas de Conversiòn</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <div class="social-links">
+        <a href="https://twitter.com" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+        <a href="https://es-es.facebook.com" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com" class="instagram" target="_blank"><i class="bi bi-instagram"
+            target="_blank"></i></a>
+        <a href="https://www.tiktok.com" class="linkedin" target="_blank"><i class="bi bi-tiktok"
+            target="_blank"></i></a>
+      </div>
+    </div>
+  </header>
+  <section id="about" class="about">
+    <div class="about-me container">
+      <div class="section-title">
+        <h2>Historia</h2>
+        <p>Un Recorrido por la Historia de Argentina</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-right">
+          <video class="img-fluid" autoplay loop controls>
+            <source src="img/Historia Argentina 1810 - 1860 (Linea del Tiempo).mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+          <h3>De la independencia a la cultura moderna</h3>
+          <p class="fst-italic">
+            Argentina, ubicada en el extremo sur de América del Sur, tiene una rica historia que combina culturas
+            indígenas, colonización europea y luchas por la independencia. Antes de la llegada de los españoles en el
+            siglo XVI, el territorio estaba habitado por diversas civilizaciones indígenas, como los diaguitas,
+            guaraníes y mapuches.
+          <p class="fst-italic">
+            En 1536, los españoles fundaron el asentamiento de Buenos Aires, aunque enfrentaron resistencia indígena. A
+            lo largo de los siglos XVII y XVIII, la región formó parte del Virreinato del Perú y posteriormente del
+            Virreinato del Río de la Plata. En 1816, Argentina declaró su independencia del dominio español.
+          <p class="fst-italic">
+            Durante el siglo XIX, el país atravesó guerras civiles y consolidó su identidad nacional bajo líderes como
+            Juan Manuel de Rosas y Bartolomé Mitre. En el siglo XX, Argentina experimentó alternancia entre gobiernos
+            democráticos y dictaduras militares, destacándose la presidencia de Juan Domingo Perón y el movimiento
+            peronista.
+        </div>
+      </div>
+    </div>
+    <div class="counts container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-emoji-smile"></i>
+            <span data-purecounter-start="0" data-purecounter-end="46000000" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Poblacion</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="  bi bi-gem"></i>
+            <span data-purecounter-start="0" data-purecounter-end="2780000" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>Superficie (km²)</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-heart-fill"></i>
+            <span data-purecounter-start="0" data-purecounter-end="500000000" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p>PIB mill (Dolares)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials container">
+      <div class="section-title">
+        <h2>Ciudades Historicas</h2>
+      </div>
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <h2>Buenos aires</h2>
+              <p>
+                <i>Fundada en 1536 por Pedro de Mendoza, la ciudad fue un importante puerto colonial y el centro del
+                  comercio entre Europa y América del Sur. A lo largo de su historia, ha sido testigo de numerosos
+                  eventos políticos y sociales, como la Revolución de Mayo en 1810, que marcó el inicio de la
+                  independencia de Argentina. Hoy en día, Buenos Aires es una metrópoli cosmopolita conocida por su
+                  arquitectura europea, su vida nocturna, y su legado cultural, como el tango y el teatro.</i>
+              </p>
+              <img src="img/Datos/buenosAires.jpg" class="testimonial-img" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <h2>Córdoba</h2>
+              <p>
+                <i>Fundada en 1573 por Jerónimo Luis de Cabrera, Córdoba fue el centro religioso y educativo de
+                  Argentina durante el período colonial, gracias a la Universidad Nacional de Córdoba, una de las más
+                  antiguas de América. La ciudad alberga numerosas iglesias y edificios coloniales, como la Iglesia de
+                  la Compañía de Jesús, la Catedral de Córdoba y el Cabildo. Córdoba también es famosa por su proximidad
+                  a las sierras de Córdoba, un destino turístico popular.</i>
+              </p>
+              <img src="img/Datos/cordova.jpg" class="testimonial-img" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <h2>Salta</h2>
+              <p>
+                <i>Salta, conocida como "La Linda" por su belleza, fue fundada en 1582 y se distingue por su
+                  arquitectura colonial bien conservada. La ciudad cuenta con una plaza central rodeada de importantes
+                  edificios históricos, como la Catedral de Salta y el Cabildo. Además, Salta es famosa por su tradición
+                  musical, particularmente el folclore argentino, y por su cercanía a las montañas y los viñedos del
+                  Valle de Cafayate. La ciudad también es puerta de entrada a la región del Norte argentino.</i>
+              </p>
+              <img src="img/Datos/salta.jpg" class="testimonial-img" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <h2>Rosario</h2>
+              <p>
+                <i>Fundada en 1793, Rosario es una ciudad de gran importancia histórica y cultural. Es conocida por ser
+                  el lugar donde se izó la bandera argentina por primera vez, en 1812, y por el Monumento Nacional a la
+                  Bandera, que se erige en la costa del río Paraná. Rosario también es un importante centro industrial y
+                  comercial y tiene una vibrante vida cultural con teatros, museos y una rica tradición en música y
+                  arte.</i>
+              </p>
+              <img src="img/Datos/rosario.jpg" class="testimonial-img" alt="">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <h2>Mendoza</h2>
+              <p>
+                <i>Fundada en 1561, Mendoza se encuentra al pie de la Cordillera de los Andes y es famosa por ser el
+                  centro vinícola más importante de Argentina, especialmente por su producción de Malbec. La ciudad
+                  tiene un hermoso centro histórico con plazas, iglesias coloniales, y el Museo del Área Fundacional.
+                  Mendoza también es conocida por sus paisajes montañosos, donde se realizan deportes de aventura como
+                  el trekking, el esquí y la escalada.</i>
+              </p>
+              <img src="img/Datos/mendoza.jpg" class="testimonial-img" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <div class="owl-carousel testimonials-carousel"></div>
+    </div>
+  </section>
+  <section id="resume" class="resume">
+    <div class="container">
+      <div class="container-fluid bg-1 text-center">
+        <h3 class="margin" style="color: #74ACDF"><strong>Tradiciones y Cultura</strong></h3>
+        <img src="img/Argentina.jpg" class="img-responsive margin"
+          style="display:inline; border-radius:50%; width:350px; height:350px;" alt="Bird">
+        <h3 style="color: #74ACDF">Argentina</h3>
+      </div>
+
+
+      <!-- Second Container -->
+      <div class="container-fluid bg-2 text-right" style="font-family: Open Sans, sans-serif">
+        <p>Argentina es un país con una rica herencia cultural influenciada por raíces indígenas, criollas y europeas.
+          Es mundialmente conocida por el tango, un baile y género musical que nació en Buenos Aires. El mate, una
+          infusión tradicional, es un símbolo de unión social, mientras que el asado representa la pasión por la carne y
+          las reuniones familiares. El fútbol es una verdadera pasión nacional, con grandes figuras como Maradona y
+          Messi. Además, el folklore, con danzas como la zamba y la chacarera, y celebraciones como el carnaval,
+          destacan su diversidad cultural y su orgullo por las tradiciones.</p>
+        <a href="#" class="btn btn-default btn-lg">
+          <span class="glyphicon glyphicon-search"></span> Search
+        </a>
+      </div>
+
+      <!-- Third Container (Grid) -->
+      <div class="container-fluid bg-3 text-right">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2 style="color: #74ACDF"> <strong>Asado Argentino</strong></h2>
+            <p>El asado argentino es más que una simple comida; es un evento social que se disfruta con amigos y
+              familiares. Se trata de carnes asadas lentamente en una parrilla, a menudo acompañadas de ensaladas, pan y
+              vino. Es una tradición profundamente arraigada en la cultura gaucha y una parte esencial de la vida social
+              argentina.</p>
+            <img src="img/asado.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-4">
+            <h2 style="color: #74ACDF"><strong>Mate</strong></h2>
+            <p>El mate es una infusión de hojas de yerba mate, consumida principalmente en el norte y centro del país,
+              pero también en muchas otras regiones. Es un símbolo de hospitalidad y camaradería, ya que se comparte
+              entre amigos o familiares. Beber mate es una costumbre diaria en muchas familias argentinas.</p>
+            <img src="img/descarga (1).jpg" class="img-responsive margin" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-4 perso">
+            <h2 style="color: #74ACDF"><strong>Carnaval</strong></h2>
+            <p>Aunque más reconocido en Brasil, Argentina también celebra el carnaval con mucha alegría, sobre todo en
+              las provincias del norte y el litoral. En Gualeguaychú (Entre Ríos) y Corrientes, se realizan desfiles
+              espectaculares con comparsas, carrozas, y disfraces de colores vibrantes, que atraen a miles de
+              visitantes.</p>
+            <img src="img/carnaval.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-4">
+            <h2 style="color: #74ACDF"><strong>El Alfajor</strong></h2>
+            <p>Este género musical y de danza, nacido en Buenos Aires a finales del siglo XIX, es un emblema de la
+              cultura argentina. Con su pasión y elegancia, el tango ha conquistado el mundo y es reconocido como
+              Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO. Se baila en milongas (salones de baile) y es
+              una de las tradiciones más representativas del país.</p>
+            <img src="img/Alfajores.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-4">
+            <h2 style="color: #74ACDF"><strong>La Fiesta Nacional de la Vendimia</strong></h2>
+            <p>Celebrada en Mendoza, la Fiesta Nacional de la Vendimia honra la cosecha de uvas y la producción de vino,
+              una de las principales industrias argentinas. La fiesta incluye desfiles, música, danzas y la elección de
+              la Reina de la Vendimia, y atrae a miles de turistas cada año.</p>
+            <img src="img/Vendimia.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+          </div>
+          <div class="col-sm-4 perso">
+            <h2 style="color: #74ACDF"><strong>Cumbia y Rock Nacional</strong></h2>
+            <p>La música popular en Argentina también incluye géneros como la cumbia y el rock nacional, ambos con una
+              fuerte identidad local. El rock argentino tiene una historia rica, con bandas como Soda Stereo y Los
+              Fabulosos Cadillacs que influyeron en toda América Latina.</p>
+            <img src="img/cumbia.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Cuidados</h2>
+        <p>Lugares Turisticos</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="icon-box">
+            <h3>Centro de Buenos Aires</h3>
+            <img src="img/turistico1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>La capital argentina es una ciudad cosmopolita que combina lo antiguo con lo moderno. El Teatro Colón es
+              uno de los teatros de ópera más importantes del mundo, y el Cementerio de la Recoleta es famoso por su
+              arquitectura y la tumba de Eva Perón. Los turistas también disfrutan del barrio de San Telmo, conocido por
+              su ambiente bohemio y sus tanguerías, y el Puerto Madero, una zona renovada con restaurantes y modernas
+              edificaciones.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+          <div class="icon-box">
+            <h3>Cataratas del Iguazú</h3>
+            <img src="img/turistico2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Una de las maravillas naturales del mundo, las imponentes Cataratas del Iguazú seguramente sean uno de
+              esos imborrables recuerdos que te lleves de Argentina.
+              Caminando por las pasarelas, después de recorrer camino de selva subtropical, llegarás hasta la gran
+              estrella del parque: la Garganta del Diablo, un salto de 80 metros de alto y 150 de ancho que te hará
+              vibrar las piernas y se asegurará de que te vayas mojado, por lo que es importante que tengas especial
+              cuidado con la tecnología que lleves.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+          <div class="icon-box">
+            <h3>Quebrada de Humahuaca</h3>
+            <img src="img/turistico3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Los pueblos de la Quebrada de Humahuaca, en la Provincia de Jujuy, son uno de los 11 sitios declarados
+              Patrimonio de la Humanidad en Argentina. Estos pequeños poblados entre montañas rojizas, airampos y
+              cardones, no solo son unos de los mejores lugares para visitar en Argentina por su espectacular entorno
+              natural, sino también por las tradiciones culturales que conservan.
+              Febrero es el mes más importante del año para estas comunidades, cuando se festeja el carnaval y la fiesta
+              está en sus calles. Pero en cualquier época vas a disfrutar de sus costumbres, ya que esto no es algo que
+              se haga para satisfacer al turismo sino un estilo de vida.</p>
+          </div>
+        </div>
+        <div class="skills container">
+          <div class="section-title">
+            <h2>Estadisticas</h2>
+          </div>
+          <div class="row skills-content">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill">Reservas (Buenos Aires)<i class="val">90%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Reservas (Cataratas del Iguazú)<i class="val">80%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill">Reservas (Quebrada de Humahuaca)<i class="val">40%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <h3>Cachi – Cafayate</h3>
+            <img src="img/turistico4.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>En la Plaza 9 de Julio, centro social de la ciudad, está el Cabildo histórico, ejemplo de arquitectura
+              colonial y que es el más completo que se conserva en Argentina. A metros de este, el Museo de Arqueología
+              de Alta Montaña preserva a las momias de Llullaillaco, dos niñas y un niño sacrificados por los incas como
+              parte de sus ofrendas rituales a los dioses y enterrados en lo alto de este volcán a más de 6000 metros de
+              altura, lo que hizo que estos se conservaran por alrededor de 500 años en perfecto estado.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <h3>Talampaya e Ischigualasto</h3>
+            <img src="img/turistico5.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Las provincias de La Rioja y San Juan son tierra de paisajes que te harán viajar imaginariamente a otro
+              planeta. Los parques Talampaya e Ischigualasto, uno de cada lado de la frontera provincial, no suelen ser
+              tenidos en cuenta por los turistas que hacen su primer viaje al país, pero después de haberlos conocido
+              creo que son de los mejores lugares para visitar en Argentina.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+          <div class="icon-box">
+            <h3>Mendoza y sus viñedos</h3>
+            <img src="img/turistico6.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+            <p>Si te gusta el vino de calidad, Mendoza es tu lugar en Argentina. Algunas de las bodegas más exclusivas
+              del mundo se encuentran en esta provincia, entre otras de pequeña producción que ofrecen visitas guiadas y
+              degustaciones. El vino más buscado por los extranjeros y emblema nacional es el malbec, ya que el 75% del
+              cultivo mundial de esta uva se encuentra en Argentina.</p>
+          </div>
+        </div>
+        <div class="skills container">
+          <div class="section-title">
+            <h2>Estadisticas</h2>
+          </div>
+          <div class="row skills-content">
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill">Reservas de Cachi – Cafayate<i class="val">60%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+              <div class="progress">
+                <span class="skill">Reservas de Talampaya e Ischigualasto<i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="progress">
+                <span class="skill">Reservas de Mendoza y sus viñedos<i class="val">70%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contenido</h2>
+        <p></p>
+      </div>
+      <div class="row">
+        <div class="jumbotron">
+          <div class="container text-center">
+            <h1 style="color: #74ACDF">Biografia y Biodiversidad</h1>      
+            <p>"Argentina, un crisol de culturas y tradiciones que celebra su diversidad con pasión y orgullo."</p>
+          </div>
+        </div>
+          
+        <div class="container-fluid bg-3 text-center">    
+          <h3>Información</h3><br>
+          <div class="row">
+            <div class="col-sm-3">
+              <h3 style="color: #74ACDF">Clima Subtropical</h3>
+              <p>Se encuentra principalmente en el norte de Argentina, como en Misiones y el noroeste. Es cálido y húmedo, con abundantes lluvias durante todo el año.</p>
+              <img src="img/tropical.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+              <h3 style="color: #74ACDF">Clima Templado</h3>
+              <p>Es común en la región pampeana, que incluye áreas como Buenos Aires, Córdoba y Santa Fe. Este clima se caracteriza por veranos cálidos e inviernos moderadamente fríos.</p>
+              <img src="img/templado.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+              <h3 style="color: #74ACDF">Clima Árido y Semiárido</h3>
+              <p>Predomina en el centro y oeste de Argentina, especialmente en Mendoza y la región de Cuyo. La escasez de lluvias crea paisajes desérticos o semi-desérticos, donde la biodiversidad está adaptada a condiciones de sequedad. </p>
+              <img src="img/arido.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3">
+              <h3 style="color: #74ACDF">Clima Frío</h3>
+              <p>En el sur de Argentina, especialmente en la Patagonia y Tierra del Fuego, se presentan inviernos largos y nevados, con veranos cortos y frescos. La fauna aquí incluye especies adaptadas a climas fríos, como el cóndor, el guanaco y el puma. También hay importantes ecosistemas marinos donde se pueden encontrar ballenas, lobos marinos y pingüinos.</p>
+              <img src="img/frio.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+          </div>
+        </div><br>
+        
+        <div class="container-fluid bg-3 text-center">    
+          <div class="row">
+            <div class="col-sm-3">
+              <h3 style="color: #74ACDF">Selvas Subtropicales</h3>
+              <p>Árboles como el palo rosa y la araucaria. Especies emblemáticas incluyen el yaguareté, tapir, monos carayá y tucanes.
+              </p>
+              <img src="img/selvas.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3">
+              <h3 style="color: #74ACDF">Región Pampeana</h3> 
+              <p>Pastizales extensos que albergan especies como el ñandú, venado de las pampas y aves como el chimango.</p>
+              <img src="img/zorro.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3">
+              <h3 style="color: #74ACDF">Monte y Sierras</h3> 
+              <p>Cactus, arbustos xerófilos, vizcachas, guanacos y zorros.</p>
+              <img src="img/captus.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3">
+              <h3 style="color: #74ACDF">Patagonia y Tierra del Fuego</h3>
+              <p>Estepas, bosques de lenga, guanacos, cóndores y fauna marina como ballenas francas y pingüinos de Magallanes.</p>
+              <img src="img/carpincho.jpg" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+          </div>
+        </div><br><br>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-title">
+        <h2>Contacto</h2>
+        <p>Escribenos tus dudas</p>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-map"></i>
+            <h3>Mi Dirección</h3>
+            <p>Ecuador, Pichincha, Quito</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-share-alt"></i>
+            <h3>Perfiles Sociales</h3>
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bi bi-discord"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-envelope"></i>
+            <h3>Mi Correo</h3>
+            <p>jacquigavi921@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 d-flex align-items-stretch">
+          <div class="info-box">
+            <i class="bx bx-phone-call"></i>
+            <h3>Llamadas</h3>
+            <p>+593 990528893</p>
+          </div>
+        </div>
+      </div>
+      <form action="vendor/php-contacto/contact.php" method="post" role="form" class="php-email-form mt-4">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Ingrese su Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Ingrese el asunto" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+        </div>
+        <div class="my-3">
+          <div class="loading">Cargando</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Su mensaje a sido enviado Gracias!</div>
+        </div>
+        <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+      </form>
+    </div>
+  </section>
+  <div class="credits">
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+  <!-- Vendor JS Files -->
+  <script src="vendor/purecounter/purecounter.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

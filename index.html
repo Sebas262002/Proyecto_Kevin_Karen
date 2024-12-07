@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Pandas</title>
+  <title>Mapa Interactivo de Argentina</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -29,21 +29,26 @@
 
 <body>
   <!-- ======= Header ======= -->
+  <video autoplay muted loop id="background-video">
+    <source src="img/video1.mp4" type="video/mp4">
+  </video>
+  
   <header id="header">
     <div class="container">
       <h1><a href="#" class="fst-italic">Mapa turistico de Argentina</a></h1>
-      <h2>Argentina <span>El pulmon del Planeta </span>.</h2>
+      <h2>Argentina <span>El pulmón del Planeta</span></h2>
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header">Inicio</a></li>
           <li><a class="nav-link" href="#about">Historia</a></li>
           <li><a class="nav-link" href="#resume">Cultura y Tradiciones</a></li>
-          <li><a class="nav-link" href="#services">Lugares Turisticos</a></li>
-          <li><a class="nav-link" href="#portfolio">Geografia y Biodiversidad</a></li>
-          <li><a class="nav-link" href="#contact">Divisas de Conversiòn</a></li>
+          <li><a class="nav-link" href="#services">Lugares Turísticos</a></li>
+          <li><a class="nav-link" href="#portfolio">Geografía y Biodiversidad</a></li>
+          <li><a class="nav-link" href="#contact">Conversor de Divisas</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav>
       <div class="social-links">
         <a href="https://twitter.com" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
@@ -478,6 +483,7 @@
         </div><br><br>
       </div>
     </div>
+    
   </section>
   <section id="contact" class="contact">
     <div class="container">
@@ -485,64 +491,59 @@
         <h2>Contacto</h2>
         <p>Escribenos tus dudas</p>
       </div>
+
       <div class="row mt-2">
-        <div class="col-md-6 d-flex align-items-stretch">
+        <!-- Campo para ingresar la cantidad a convertir (Mi Dirección) -->
+        <div class="col-md-12 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-map"></i>
-            <h3>Mi Dirección</h3>
-            <p>Ecuador, Pichincha, Quito</p>
+            <h3>Valor a Convertir</h3>
+            <input type="number" id="amountToConvert" placeholder="Ingresa la cantidad" class="form-control" />
           </div>
         </div>
-        <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
-          <div class="info-box">
-            <i class="bx bx-share-alt"></i>
-            <h3>Perfiles Sociales</h3>
-            <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
+      
+        <!-- Selección de la moneda desde (Mi Correo) -->
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3>Mi Correo</h3>
-            <p>jacquigavi921@gmail.com</p>
+            <h3>Selecciona Moneda de Origen</h3>
+            <select id="fromCurrency" class="form-control">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="ARS">ARS</option>
+              <option value="GBP">GBP</option>
+              <option value="BRL">BRL</option>
+            </select>
           </div>
         </div>
+      
+        <!-- Selección de la moneda hacia donde se convertirá (Llamadas) -->
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
-            <h3>Llamadas</h3>
-            <p>+593 990528893</p>
+            <h3>Selecciona Moneda de Destino</h3>
+            <select id="toCurrency" class="form-control">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="ARS">ARS</option>
+              <option value="GBP">GBP</option>
+              <option value="BRL">BRL</option>
+            </select>
           </div>
         </div>
       </div>
-      <form action="vendor/php-contacto/contact.php" method="post" role="form" class="php-email-form mt-4">
-        <div class="row">
-          <div class="col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Ingrese su nombre" required>
-          </div>
-          <div class="col-md-6 form-group mt-3 mt-md-0">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Ingrese su Email" required>
-          </div>
+      
+      <!-- Botón para realizar la conversión -->
+      <form role="form" class="php-email-form mt-4">
+        <div class="text-center">
+          <button type="button" id="convertBtn" class="btn btn-primary">Convertir</button>
         </div>
-        <div class="form-group mt-3">
-          <input type="text" class="form-control" name="subject" id="subject" placeholder="Ingrese el asunto" required>
-        </div>
-        <div class="form-group mt-3">
-          <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
-        </div>
-        <div class="my-3">
-          <div class="loading">Cargando</div>
-          <div class="error-message"></div>
-          <div class="sent-message">Su mensaje a sido enviado Gracias!</div>
-        </div>
-        <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
       </form>
-    </div>
+      
+      <!-- Resultado de la conversión -->
+      <div class="result mt-4 text-center" id="result"></div>
+
+      
   </section>
   <div class="credits">
     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
@@ -557,6 +558,8 @@
   <script src="vendor/php-email-form/validate.js"></script>
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
+  
 </body>
 
 </html>

@@ -1,65 +1,73 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const exchangeRates = {
-        "USD": {
-            "USD": 1,
-            "EUR": 0.91,
-            "ARS": 346.14,
-            "GBP": 0.80,
-            "BRL": 5.30
-        },
-        "EUR": {
-            "USD": 1.10,
-            "EUR": 1,
-            "ARS": 380.53,
-            "GBP": 0.88,
-            "BRL": 5.82
-        },
-        "ARS": {
-            "USD": 0.0029,
-            "EUR": 0.0026,
-            "ARS": 1,
-            "GBP": 0.0023,
-            "BRL": 0.015
-        },
-        "GBP": {
-            "USD": 1.25,
-            "EUR": 1.14,
-            "ARS": 432.23,
-            "GBP": 1,
-            "BRL": 6.60
-        },
-        "BRL": {
-            "USD": 0.19,
-            "EUR": 0.17,
-            "ARS": 66.75,
-            "GBP": 0.15,
-            "BRL": 1
-        }
-    };
+const apiKey = "c1f9ff949fca49290be779f2"; // Reemplaza con tu clave de API de ExchangeRate-API
 
-    const amountToConvert = document.getElementById('amountToConvert');
-    const fromCurrency = document.getElementById('fromCurrency');
-    const toCurrency = document.getElementById('toCurrency');
-    const resultDiv = document.getElementById('result');
-    const convertBtn = document.getElementById('convertBtn');
+// Función para obtener la tasa de cambio utilizando la API
+async function obtenerTasaDeCambio(baseCurrency, targetCurrency) {
+  const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`;
 
-    // Función para realizar la conversión
-    convertBtn.addEventListener('click', () => {
-        const amount = parseFloat(amountToConvert.value);
-        const from = fromCurrency.value;
-        const to = toCurrency.value;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
 
-        if (!amount || !from || !to) {
-            resultDiv.textContent = 'Por favor ingresa todos los campos correctamente.';
-            return;
-        }
+    if (data.result === 'success') {
+      return data.conversion_rates[targetCurrency];
+    } else {
+      throw new Error('Error al obtener la tasa de cambio');
+    }
+  } catch (error) {
+    alert(error.message);
+    return null;
+  }
+}
 
-        // Obtener la tasa de conversión
-        const rate = exchangeRates[from][to];
-        const convertedAmount = amount * rate;
+// Función para realizar la conversión de monedas
+async function convertirMoneda() {
+  const value = parseFloat(document.getElementById('value').value);
+  const baseCurrency = document.getElementById('baseCurrency').value;
+  const targetCurrency = document.getElementById('targetCurrency').value;
 
-        // Mostrar el resultado
-        resultDiv.textContent = `${amount} ${from} = ${convertedAmount.toFixed(2)} ${to}`;
-        window.scrollTo({ top: resultDiv.offsetTop, behavior: 'smooth' }); // Desplazarse al resultado
-    });
+  if (isNaN(value) || value <= 0) {
+    alert("Por favor ingresa un valor numérico válido.");
+    return;  // Detener la función si el valor no es válido
+  }
+
+  // Obtener la tasa de cambio usando la API
+  const tasa = await obtenerTasaDeCambio(baseCurrency, targetCurrency);
+
+  if (tasa !== null) {
+    // Realizar la conversión
+    let resultado = value * tasa;
+
+    // Mostrar el resultado
+    document.getElementById('result').innerText = `${value} ${baseCurrency} = ${resultado.toFixed(2)} ${targetCurrency}`;
+  }
+}
+
+// Validación de la entrada del usuario (opcional)
+document.getElementById('value').addEventListener('input', function() {
+  let value = this.value;
+  // Verifica si el valor ingresado es un número positivo
+  if (isNaN(value) || value <= 0) {
+    this.setCustomValidity('Por favor ingresa un número válido mayor a 0');
+  } else {
+    this.setCustomValidity('');
+  }
 });
+
+
+
+// Evento para el botón de conversión
+document.getElementById('convertBtn').addEventListener('click', convertirMoneda);
+
+
+//Evento para el boton de invertir 
+document.getElementById('swap-btn').addEventListener('click', function() {
+    // Obtener las monedas seleccionadas
+    var baseCurrency = document.getElementById('baseCurrency');
+    var targetCurrency = document.getElementById('targetCurrency');
+    
+    // Intercambiar las opciones seleccionadas
+    var temp = baseCurrency.value;
+    baseCurrency.value = targetCurrency.value;
+    targetCurrency.value = temp;
+  });
+  

@@ -136,6 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+
   }
 }
 
@@ -312,6 +313,8 @@ section.section-show {
 section .container {
   background: rgba(0, 0, 0, 0.9);
   padding: 30px;
+  border-radius: 30px;
+
 }
 @media (max-width: 768px) {
   section {
@@ -874,11 +877,13 @@ section .container {
   float: left;
   background: rgba(255, 255, 255, 0.1);
 }
+
+/*Valor, De, A*/
 .contact .info-box h3 {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  margin: 10px 0 8px 68px;
+
 }
 .contact .info-box p {
   padding: 0;
@@ -1034,3 +1039,132 @@ p.fst-italic {
   text-align: justify; /* Justifica el texto en ambas direcciones (izquierda y derecha) */
   line-height: 1.6; /* Ajusta el espaciado entre líneas para mejorar la legibilidad */
 }
+
+
+/*NCNOVDNN*/
+.control {
+  display: flex;
+  background: var(--input-background);
+  box-shadow: inset 0 0 3px var(--input-shadow);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.control button {
+  --image: url(https://placehold.co/30/teal/white?text=$);
+  font-weight: 600;
+  background: transparent;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.control button::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: teal var(--image) center no-repeat;
+}
+
+.control button::after {
+  font-family: "Material Symbols Outlined";
+  font-size: 1.5rem;
+  content: "\e5cf";
+}
+
+.control button:hover {
+  color: var(--green);
+}
+
+.control input {
+  font-size: 2.5rem;
+  text-align: end;
+  background: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+}
+
+.control input::-webkit-inner-spin-button,
+.control input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.swap-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  line-height: 1;
+  box-shadow: 0 3px 5px var(--shadow-1);
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+
+.swap-btn:hover {
+  background: var(--green);
+}
+
+
+
+/* Hace que los inputs y selects se adapten a diferentes tamaños de pantalla */
+input[type="text"], .form-select {
+  width: 100%;  /* Se ajusta al 100% del contenedor */
+  box-sizing: border-box;  /* Incluye padding y border en el tamaño total */
+  padding: 10px;
+}
+
+/* Regla para que en pantallas pequeñas, los campos ocupen todo el ancho disponible */
+@media (max-width: 767px) {
+  .col-12 {
+    margin-bottom: 10px;  /* Agrega margen entre los campos */
+  }
+}
+
+/* Para pantallas grandes, se puede controlar un tamaño máximo */
+@media (min-width: 768px) {
+  .form-select, input[type="text"] {
+    max-width: 300px;  /* Ajusta el tamaño máximo para pantallas más grandes */
+  }
+}
+
+/* Color de borde cuando el input está enfocado (clickeado) */
+#value:focus {
+  border: 2.2px solid #0f29bb; /* Cambia este color a lo que desees */
+  outline: none; /* Opcional: elimina el borde de enfoque predeterminado del navegador */
+}
+#value:hover {
+  background-color: #c7c4c4; /* Gris claro o color ocre */ /* Opcional: Cambia el cursor para indicar que es interactivo */
+}
+
+#baseCurrency:hover, #targetCurrency:hover{
+  background-color: #c7c4c4; /* Gris claro o color ocre */ /* Opcional: Cambia el cursor para indicar que es interactivo */
+  cursor: pointer;
+}
+
+/* Contenedor del botón */
+.swap-btn {
+  border: none; /* Sin borde */
+  padding: 30px; /* Relleno alrededor del icono */
+  font-size: 80px; /* Tamaño de la fuente del icono */
+  color: rgb(7, 7, 7); /* Color del icono */
+  cursor: pointer; /* Aparece como puntero cuando el usuario pasa el ratón */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Hace el botón completamente redondo */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
+  background-color: #c5cad0;
+}
+
+/* Efecto hover para el botón */
+.swap-btn:hover {
+  background-color: #797979; /* Color al pasar el ratón */
+}
+

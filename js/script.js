@@ -1,11 +1,12 @@
-const apiKey = "c1f9ff949fca49290be779f2"; // Reemplaza con tu clave de API de ExchangeRate-API
+const apiKey = "c1f9ff949fca49290be779f2"; 
+
 
 // Función para obtener la tasa de cambio utilizando la API
 async function obtenerTasaDeCambio(baseCurrency, targetCurrency) {
   const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${baseCurrency}`;
 
   try {
-    const response = await fetch(url);
+    const response = await fetch(url); 
     const data = await response.json();
 
     if (data.result === 'success') {
@@ -18,6 +19,7 @@ async function obtenerTasaDeCambio(baseCurrency, targetCurrency) {
     return null;
   }
 }
+
 
 // Función para obtener el nombre completo de la moneda
 function getCurrencyName(currencyCode) {

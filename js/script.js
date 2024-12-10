@@ -42,19 +42,6 @@ async function convertirMoneda() {
   }
 }
 
-// Validación de la entrada del usuario (opcional)
-document.getElementById('value').addEventListener('input', function() {
-  let value = this.value;
-  // Verifica si el valor ingresado es un número positivo
-  if (isNaN(value) || value <= 0) {
-    this.setCustomValidity('Por favor ingresa un número válido mayor a 0');
-  } else {
-    this.setCustomValidity('');
-  }
-});
-
-
-
 // Evento para el botón de conversión
 document.getElementById('convertBtn').addEventListener('click', convertirMoneda);
 

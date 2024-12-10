@@ -14,7 +14,8 @@ body {
   position: relative;
   background: transparent;
 }
-/* Asegúrate de que el video ocupe toda la pantalla */
+
+
 #background-video {
   position: fixed;   /* Fija el video en la pantalla */
   top: 0;
@@ -1202,8 +1203,10 @@ input[type="text"], .form-select {
   cursor: pointer;
 }
 
+
 /* Contenedor del botón */
 .swap-btn {
+  
   border: none; /* Sin borde */
   padding: 30px; /* Relleno alrededor del icono */
   font-size: 80px; /* Tamaño de la fuente del icono */
@@ -1214,11 +1217,13 @@ input[type="text"], .form-select {
   justify-content: center;
   border-radius: 50%; /* Hace el botón completamente redondo */
   transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
-  background-color: #c5cad0;
+  background-color: white;
 }
 
 /* Efecto hover para el botón */
 .swap-btn:hover {
-  background-color: #797979; /* Color al pasar el ratón */
+  background-color: #74ACDF; /* Color al pasar el ratón */
 }
+
+
 

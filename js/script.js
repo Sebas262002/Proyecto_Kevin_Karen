@@ -19,6 +19,23 @@ async function obtenerTasaDeCambio(baseCurrency, targetCurrency) {
   }
 }
 
+// Función para obtener el nombre completo de la moneda
+function getCurrencyName(currencyCode) {
+  const currencies = {
+    "RUB": "rublos rusos",
+    "EUR": "euros",
+    "NLD": "florín neerlandés",
+    "ARS": "pesos argentinos",
+    "COP": "pesos colombianos",
+    "ITL": "lira italiana",
+    "USD": "dólares estadounidenses",
+    "BRL": "real brasileño",
+    "CRC": "colón costarricense",
+    "UYU": "pesos uruguayos"
+  };
+  return currencies[currencyCode] || currencyCode;
+}
+
 // Función para realizar la conversión de monedas
 async function convertirMoneda() {
   const value = parseFloat(document.getElementById('value').value);
@@ -37,24 +54,26 @@ async function convertirMoneda() {
     // Realizar la conversión
     let resultado = value * tasa;
 
-    // Mostrar el resultado
-    document.getElementById('result').innerText = `${value} ${baseCurrency} = ${resultado.toFixed(2)} ${targetCurrency}`;
+    // Obtener los nombres completos de las monedas
+    let baseCurrencyName = getCurrencyName(baseCurrency);
+    let targetCurrencyName = getCurrencyName(targetCurrency);
+
+    // Mostrar el resultado en el formato deseado
+    document.getElementById('result').innerText = `${value} ${baseCurrencyName} = ${resultado.toFixed(6)} ${targetCurrencyName}`;
   }
 }
 
 // Evento para el botón de conversión
 document.getElementById('convertBtn').addEventListener('click', convertirMoneda);
 
-
-//Evento para el boton de invertir 
+// Evento para el botón de invertir monedas
 document.getElementById('swap-btn').addEventListener('click', function() {
-    // Obtener las monedas seleccionadas
-    var baseCurrency = document.getElementById('baseCurrency');
-    var targetCurrency = document.getElementById('targetCurrency');
-    
-    // Intercambiar las opciones seleccionadas
-    var temp = baseCurrency.value;
-    baseCurrency.value = targetCurrency.value;
-    targetCurrency.value = temp;
-  });
+  // Obtener las monedas seleccionadas
+  var baseCurrency = document.getElementById('baseCurrency');
+  var targetCurrency = document.getElementById('targetCurrency');
   
+  // Intercambiar las opciones seleccionadas
+  var temp = baseCurrency.value;
+  baseCurrency.value = targetCurrency.value;
+  targetCurrency.value = temp;
+});

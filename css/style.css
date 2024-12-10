@@ -941,7 +941,7 @@ section .container {
 }
 .contact .php-email-form {
   padding: 30px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(131, 13, 13, 0.08);
 }
 .contact .php-email-form .error-message {
   display: none;
@@ -988,7 +988,16 @@ section .container {
   border: 0;
   transition: 0.3s;
   color: #fff;
+
 }
+
+.php-email-form {
+  background-color: #f5f5f5; /* Cambia el fondo del formulario */
+  color: #333; /* Cambia el color del texto dentro del formulario */
+  padding: 20px; /* Opcional: agrega espacio interior */
+  border-radius: 8px; /* Opcional: bordes redondeados */
+}
+
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
   background-color: rgba(255, 255, 255, 0.11);
 }
